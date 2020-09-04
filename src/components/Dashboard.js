@@ -60,12 +60,10 @@ class Dashboard extends Component {
 
               </div>
             </div>
-
           </div>
         </header>
         <div className='mg'>
-         
-            <AddDetails {...this.props}/>
+          <AddDetails {...this.props} />
         </div>
       </div>
     )

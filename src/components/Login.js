@@ -1,12 +1,9 @@
 import React, { Component } from 'react'
 import '../style/style.css';
-
 import fire from '../Firebase';
-// import { browserHistory} from "react-router";
 import Loader from './Loader';
 import toast from 'toasted-notes';
 import 'toasted-notes/src/styles.css';
-import { Link } from 'react-router-dom';
 
 class Login extends Component {
   constructor(props) {
@@ -24,15 +21,6 @@ class Login extends Component {
 
     }
   }
-  componentDidMount() {
-
-    // [START signout]
-    fire.auth().signOut();
-    // [END signout]
-
-  }
-
-
   login(e) {
     if (fire.auth().currentUser) {
 
@@ -87,36 +75,9 @@ class Login extends Component {
   }
   onhandle() {
     this.login();
-    //this.sess()
   }
 
-
-
-
   render() {
-    //   const [email,setEmail]=useState('');
-    //   const [password,setPassword]=useState('');
-    //   const [showLoading, setShowLoading] = useState(false);
-    // const login=async()=>{
-    //   setShowLoading(true);
-    //   try{
-    //     const doLogin= await fire.auth().signInWithEmailAndPassword(email,password);
-    //     setShowLoading(false);
-    //     if(doLogin.user){
-    //       this.onNavigate("/home")
-    //     }
-    //   } catch(e){
-    //     setShowLoading(false);
-    //     Alert.alert(
-    //       e.message
-    //     );
-    //   }
-
-    // };
-    // if(this.state.loggedIn){
-    //   return <Redirect to="/desktop/"/>
-    // }
-
     return (
       <div className="base-container" ref={this.props.containerRef}>
         <div className="xb">
